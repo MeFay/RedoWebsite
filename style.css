@@ -1,106 +1,119 @@
 :root {
-    --foreground-color: #F9423A;
-    --background-color: #FFF0E0;
-    --product-primary-color: #f00;
+  --foreground-color: #f9423a;
+  --background-color: #fff0e0;
+  --product-primary-color: #f00;
 
-    --font-stack-header: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
-    --font-style-header: normal;
-    --font-weight-header: 700;
+  --font-family-announcement:'Space Mono', monospace;
+  --font-stack-header: Helvetica, "Helvetica Neue", Arial, "Lucida Grande",
+    sans-serif;
+  --font-style-header: normal;
+  --font-weight-header: 700;
 
-    --font-stack-body: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
-    --font-style-body: normal;
-    --font-weight-body: 400;
+  --font-style-body: normal;
+  --font-weight-body: 400;
 
-    --font-size-header: 26;
-    --font-size-base: 15;
+  --font-size-header: 26;
+  --font-size-base: 15;
 
-    --font-mega-title-large-desktop: 65;
+  --font-mega-title-large-desktop: 65;
 
-    --font-rich-text-large: 17;
-    --font-rich-text-small: 13;
+  --font-rich-text-large: 17;
+  --font-rich-text-small: 13;
 }
 
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-stack-body);
-    background-color: var(--background-color);
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-stack-body);
+  background-color: var(--background-color);
 }
 
 .announcement-bar {
-    background-color: var(--foreground-color);
-    padding: 5px;
-    text-align: center;
+  background-color: var(--foreground-color);
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+  padding: 8px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .announcement-bar__text {
-    color: var(--background-color);
     text-decoration: none;
-    font-size: var(--font-size-header);
+    color: var(--background-color);
+    letter-spacing: 1px;
+    transition: 0.6s;
+    font-family: var(--font-family-announcement);
+    font-weight: 400;
 }
 
-
 header {
-    font-family: var(--font-stack-header);
-    font-size: var(--font-style-header);
-    font-weight: var(--font-weight-header);
-    background-color: var(--background-color);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    padding: 40px 100px;
+  font-family: var(--font-stack-header);
+  font-size: var(--font-style-header);
+  font-weight: var(--font-weight-header);
+  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 0 0 0;
 }
 
 header .nav-left,
 header .nav-center,
 header .nav-right {
-    display: flex;
-    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 40px 0 0 0;
 }
 
-
 header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
 }
 
 header ul li {
-    margin: 0 15px;
-    font-size: 17px;
-    list-style: none;
+  margin: 0 15px;
+  font-size: 17px;
+  list-style: none;
 }
 
 header ul li a {
-    text-decoration: none;
-    color: var(--foreground-color);
-    letter-spacing: 1px;
-    font-weight: var(--font-weight-header);
-    transition: 0.6s;
-
+  text-decoration: none;
+  color: var(--foreground-color);
+  letter-spacing: 1px;
+  font-weight: var(--font-weight-header);
+  transition: 0.6s;
 }
 
 header .nav-center svg {
-    fill: var(--foreground-color);
-    width: 101px;
-    height: 48px;
+  fill: var(--foreground-color);
 }
 
 header .nav-right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 header .nav-right a {
     text-decoration: none;
     color: var(--foreground-color);
-    font-size: 17px;
+    letter-spacing: 1px;
     font-weight: var(--font-weight-header);
     transition: 0.6s;
+  }
+
+  header .nav-right svg {
+    fill: #f9423a;
 }
