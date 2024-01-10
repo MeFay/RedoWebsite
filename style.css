@@ -1,0 +1,106 @@
+:root {
+    --foreground-color: #F9423A;
+    --background-color: #FFF0E0;
+    --product-primary-color: #f00;
+
+    --font-stack-header: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    --font-style-header: normal;
+    --font-weight-header: 700;
+
+    --font-stack-body: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    --font-style-body: normal;
+    --font-weight-body: 400;
+
+    --font-size-header: 26;
+    --font-size-base: 15;
+
+    --font-mega-title-large-desktop: 65;
+
+    --font-rich-text-large: 17;
+    --font-rich-text-small: 13;
+}
+
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-stack-body);
+    background-color: var(--background-color);
+}
+
+.announcement-bar {
+    background-color: var(--foreground-color);
+    padding: 5px;
+    text-align: center;
+}
+
+.announcement-bar__text {
+    color: var(--background-color);
+    text-decoration: none;
+    font-size: var(--font-size-header);
+}
+
+
+header {
+    font-family: var(--font-stack-header);
+    font-size: var(--font-style-header);
+    font-weight: var(--font-weight-header);
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+}
+
+header .nav-left,
+header .nav-center,
+header .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li {
+    margin: 0 15px;
+    font-size: 17px;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--foreground-color);
+    letter-spacing: 1px;
+    font-weight: var(--font-weight-header);
+    transition: 0.6s;
+
+}
+
+header .nav-center svg {
+    fill: var(--foreground-color);
+    width: 101px;
+    height: 48px;
+}
+
+header .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+header .nav-right a {
+    text-decoration: none;
+    color: var(--foreground-color);
+    font-size: 17px;
+    font-weight: var(--font-weight-header);
+    transition: 0.6s;
+}
