@@ -3,7 +3,7 @@
   --background-color: #fff0e0;
   --product-primary-color: #f00;
 
-  --font-family-announcement:'Space Mono', monospace;
+  --font-family-announcement: "Space Mono", monospace;
   --font-stack-header: Helvetica, "Helvetica Neue", Arial, "Lucida Grande",
     sans-serif;
   --font-style-header: normal;
@@ -44,12 +44,12 @@ ul {
 }
 
 .announcement-bar__text {
-    text-decoration: none;
-    color: var(--background-color);
-    letter-spacing: 1px;
-    transition: 0.6s;
-    font-family: var(--font-family-announcement);
-    font-weight: 400;
+  text-decoration: none;
+  color: var(--background-color);
+  letter-spacing: 1px;
+  transition: 0.6s;
+  font-family: var(--font-family-announcement);
+  font-weight: 400;
 }
 
 header {
@@ -57,23 +57,34 @@ header {
   font-size: var(--font-style-header);
   font-weight: var(--font-weight-header);
   background-color: var(--background-color);
-  position: fixed;
+  /*position: fixed; 
   top: 0;
-  left: 0;
+  left: 0;*/
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
-  padding: 40px 0 0 0;
+  flex-direction: column;
+  border-bottom: #f9423a 2px solid;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 header .nav-left,
 header .nav-center,
 header .nav-right {
-    justify-content: space-between;
-    margin: auto;
-    padding: 40px 0 0 0;
+  justify-content: center;
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
 header ul {
@@ -107,13 +118,49 @@ header .nav-right {
 }
 
 header .nav-right a {
-    text-decoration: none;
-    color: var(--foreground-color);
-    letter-spacing: 1px;
-    font-weight: var(--font-weight-header);
-    transition: 0.6s;
-  }
+  text-decoration: none;
+  color: var(--foreground-color);
+  letter-spacing: 1px;
+  font-weight: var(--font-weight-header);
+  transition: 0.6s;
+}
 
-  header .nav-right svg {
-    fill: #f9423a;
+header .nav-right svg {
+  fill: #f9423a;
+}
+
+.hero-section {
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--foreground-color);
+  background-image: url("imagens/Hero Image.webp");
+  height:800px;
+  background-image: url("https://www.delacalle.mx/cdn/shop/files/Jan-Image-2024.jpg?v=1704324669");
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-section h1 {
+  position: absolute;
+  background-color: transparent;
+  font-size: var(--font-size-header);
+  font-weight: var(--font-weight-header);
+  line-height: 1.3;
+}
+
+.hero-btn {
+  color: white;
+  letter-spacing: 1px;
+  border: none;
+  background: #077838;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: absolute;
+
+}
+
+.hero-btn input:hover {
+  background: #f00;
 }
